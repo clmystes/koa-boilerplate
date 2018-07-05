@@ -1,0 +1,42 @@
+{
+  "name": "koa-boilerplate",
+  "version": "0.1.0",
+  "main": "app.js",
+  "repository": "git@github.com:clmystes/koa-boilerplate.git",
+  "author": "ChenLi <clmystes@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "lint": "eslint ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "husky": "^1.0.0-rc.10",
+    "lint-staged": "^7.2.0",
+    "nodemon": "^1.17.5"
+  },
+  "dependencies": {
+    "bcrypt": "^2.0.1",
+    "dotenv": "^6.0.0",
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-logger": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "koa-session": "^5.8.1",
+    "mongoose": "^5.2.1",
+    "mongoose-paginate": "^5.0.3"
+  }
+}
